@@ -1,0 +1,60 @@
+body{
+    margin: 0; /*remove default margin, set it to 0*/
+    font-family: sans-serif;
+    display: flex; /*get content to center and top*/
+    flex-direction: column; /*again set content to previous location*/
+    align-items: center; /*get all the items to the center horizontally*/
+    height: 100vh; /*set screen size into 100% viewport height(100vh)*/
+    justify-content: center; /*get all the items to the center vertically*/
+    background: url("https://images.unsplash.com/photo-1511576661531-b34d7da5d0bb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80");
+    background-size: cover;
+    overflow: hidden;
+}
+
+h2{
+    text-transform: uppercase; /*make every letter in header to capital*/
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-align: center;
+    color: darkblue;
+}
+
+.clock{
+    display: flex; /*get content in all lines to a one line next to each other*/
+}
+
+.clock div{
+    margin: 5px;
+    position: relative;
+}
+
+.clock span{
+    width: 100px;
+    height: 80px;
+    background: slateblue;
+    opacity: .8;
+    color: white;
+    display: flex; /*elements display as a flex container*/
+    justify-content: center; /*align the content within the targeted span elements(texts inside the span-00/Hours/ Minutes/ Seconds/ AM) horizontally at the center*/
+    align-items: center; /*align the content within the targeted span elements(texts inside the span-00/Hours/ Minutes/ Seconds/ AM) vertically at the center*/
+    font-size: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /*horizontal shadow, vertical shadow, blur radius, color(red, green, blue, alpha value for transparency -> rgb values are zero bcz here the color is set to black)*/
+}
+
+.clock .text{
+    height: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: darkblue;
+    opacity: 0.8px;
+}
+
+.clock #ampm{
+    bottom: 0;
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    font-size: 20px;
+    background: darkblue;
+}

@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center; /*center vertically*/
+    background-color: aliceblue;
+    font-family: sans-serif;
+}
+
+.btn{
+    background-color: pink;
+    padding: 20px 40px; /*top and bottom padding = 20px and left and right padding = 40px*/
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*horizontal shadow, vertical shadow, blur radius, color*/
+    text-decoration: none;
+    color: black;
+    position: relative; /*sets the position of the element relative to its normal position*/
+    overflow: hidden; /*specifies that any content that exceeds the boundaries of the element should be hidden*/
+}
+
+/*position: relative;: With this value, the element's position is relative to its normal position in the document flow. It can be adjusted using the top, bottom, left, and right properties. If no adjustments are made, the element will stay in its original position.
+
+position: absolute;: When an element has position: absolute;, it is positioned relative to its closest positioned ancestor (i.e., an ancestor with a positioning value other than static) or the initial containing block. If no positioned ancestors exist, the element is positioned relative to the initial containing block, which is typically the viewport.
+
+position: fixed;: This value positions the element relative to the viewport, regardless of its parent elements. It remains fixed in its position even when the page is scrolled.*/
+
+.btn span{
+    position: relative;
+    z-index: 1; /*higher z-index value brings the element closer to the front and may overlap elements with lower z-index values. If z-index: -1; the text inside the button element is not visible*/
+}
+
+.btn::before{
+    content: ""; /* sets the content of the ::before pseudo-element to an empty string. It is required when using pseudo-elements, even if the content is empty*/
+    position: absolute;
+    background-color: orangered;
+    width: 0;
+    height: 0;
+    /*position the ::before pseudo-element at the horizontal and vertical center of its parent element*/
+    left: var(--xPos);
+    top: var(--yPos);
+    transform: translate(-50%, -50%); /*translates the ::before pseudo-element 50% to the left and 50% up, effectively centering it within its parent element*/
+    border-radius: 50%;
+    transition: width .5s, height 0.5s; /*When the width and height of the ::before pseudo-element change, it will smoothly transition over a duration of 0.5 seconds*/
+}
+
+.btn:hover::before{
+    /*set the width and height of the ::before pseudo-element to 300 pixels each when the .btn element is being hovered over*/
+    width: 300px;
+    height: 300px;
+}
+
+
+

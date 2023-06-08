@@ -1,0 +1,60 @@
+body{
+    margin: 0;
+    /*set the item center horizontally*/
+    display: flex; justify-content: center;
+    /*set the items center vertically*/
+    height: 100vh; align-items: center;
+    text-align: center;
+    background: url("https://images.unsplash.com/photo-1635070041409-e63e783ce3c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=779&q=80");
+    background-size: cover;
+    overflow: hidden;
+    font-family: cursive;
+}
+
+.form{
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /*horizontal shadow, vertical shadow, blur radius, color*/
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.input{
+    display: block; /*get submit button to the bottom (make input fields in separate lines)*/
+    width: 100%;
+    box-sizing: border-box; /*set the total width and height of an element while keeping the content area consistent. The padding and border will be included within that total size, so no need to adjust the width or height to accommodate them separately*/
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    border: solid 4px rgb(53, 60, 53);
+    color: rgb(53, 60, 53);
+}
+
+.input::placeholder{
+    color: lightgray;
+    font-family: cursive;
+}
+
+.btn{
+    background-color: rgb(53, 60, 53);
+    color: white;
+    border: none;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    font-family: cursive;
+    margin: 20px 0; /*top and bottom margin = 20 px and left and right margin = 0*/
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /*horizontal shadow, vertical shadow, blur radius, color*/
+    cursor: pointer;
+}
+
+.btn:hover{
+    filter: brightness(0.9); /*when cursor points the button, button will appear slightly darker*/
+}
+
+.score{
+    color: rgb(53, 60, 53);
+    text-align: right;
+}

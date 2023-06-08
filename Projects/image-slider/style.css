@@ -1,0 +1,44 @@
+body{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-color: white;
+}
+
+.slider-container{
+    position: relative;
+    width: 500px;
+    height: 300px;
+    overflow: hidden; /*hide other images, and only visible the first image*/
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.image-container{
+    display: flex;
+    transition: transform .4s ease-in-out;
+}
+
+.btn{
+    position: absolute; /*position relative to the parent element(slider container) -> this moves the arrow icon inside the image container, and when we are loading the page the arrow icon is showing, and after reloading the image comes forward to the arrow icon, and the arrow icon goes invisible*/
+    top: 50%; /*It center vertically, and brings forward, so now it's visible*/
+    transform: translateY(-50%); /*Now the arrow icon is exactly in the middle from the Y axis(verticle center)*/
+    color: white;
+    font-size: 20px;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.btn.prev{
+    left: 10px; /*10 pixels away from the left side*/
+}
+
+.btn.next{
+    right: 10px; /*10 pixels away from the right side*/
+}
+
+.btn:hover{
+    opacity: 1; /*icon will more clear with the opacity 1 when hovering on it*/
+}
